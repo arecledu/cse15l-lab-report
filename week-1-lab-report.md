@@ -8,6 +8,8 @@ Download it [here](https://code.visualstudio.com/).
 All of these lab computers already have Visual Studio Code pre-installed, so I don't have any screenshots of the installation process.
 Instead, here's a screenshot of the website.
 
+![Incredible. VS Code's website.](1.png).
+
 ### Step 2. Connect Remotely
 
 ### Step 3. Try Out Some Commands
