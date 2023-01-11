@@ -15,6 +15,7 @@ Let's cover what we know so far.
 * The cat is schmovin.
 * The cat may be groovin.
 * The cat is gray.
+
 Let's cover things that we don't know.
 1. The cat can also perform the *stanky leg*.
 2. The cat is *real* and can, therefore, *get much higher*.
