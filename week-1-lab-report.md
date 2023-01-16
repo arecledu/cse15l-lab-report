@@ -102,6 +102,7 @@ pwd
 **Client**
 
 ![Nice.](first.png)
+
 Looks like home is `/c/Users/areclusado`.
 
 **Server**
