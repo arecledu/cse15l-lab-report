@@ -10,7 +10,7 @@ If not, download it [here](https://code.visualstudio.com/)!
 
 Here's a screenshot of the VS Code website. Just click that big blue button.
 
-![Incredible. VS Code's website.](1.png).
+![Incredible. VS Code's website.](1.png)
 
 ### Step 2. Connect Remotely
 
@@ -22,7 +22,7 @@ However! If it's your first time setting this up and you don't know your course-
 
 Go to [UCSD's Account Lookup](https://sdacs.ucsd.edu/~icc/index.php) page to find your account username.
 
-![A big ol' button that says cs15lwi23abc.](AccL.png).
+![A big ol' button that says cs15lwi23abc.](AccL.png)
 
 There it is! Now, click on it and click on change your password to set it.
 
@@ -57,7 +57,7 @@ You don't even have to make a new file. Just go to the Menu Bar (this is what Mi
 
 Then, click on `New Terminal`.
 
-![Nice.](Terminal.png)
+![New Terminal.](Terminal.png)
 
 Bam! There's a fresh terminal at the bottom of your screen. It's running PowerShell. You can see it on the top-right of that pane.
 
