@@ -94,23 +94,30 @@ Let's see what these guys can do.
 We'll be testing certain commands on both terminals.
 I'll be reposting my findings from a shared Google doc here.
 
-`cd ~`
-`pwd`
+```
+cd ~
+pwd
+```
 
 **Client**
-![Nice.](1.png)
+
+![Nice.](first.png)
 Looks like home is `/c/Users/areclusado`.
 
 **Server**
+
 ![Nice.](2.png)
+
 Looks like home is `/home/linux/ieng6/cs15lwi23/cs15lwi23akt` instead.
 
 `-cd`
 
 **Client**
+
 ![Nice.](3.png)
 
 **Server**
+
 ![Nice.](4.png)
 
 `cd` without any arguments didn’t seem to do anything.
@@ -118,11 +125,13 @@ Looks like home is `/home/linux/ieng6/cs15lwi23/cs15lwi23akt` instead.
 `ls -lat`
 
 **Client**
+
 ![Nice.](5.png)
 
 Wow! That looks like all the files in the user root directory.
 
 **Server**
+
 ![Nice.](6.png)
 
 Looks like these files only use extensions. Interesting!
@@ -131,9 +140,11 @@ Both of these appear to be in reverse alphabetical order.
 `ls -a`
 
 **Client**
+
 ![Nice.](7.png)
 
 **Server**
+
 ![Nice.](8.png)
 
 Does the same thing as ls -lat, but with less information and also horizontally.
@@ -142,6 +153,7 @@ Let’s try to list off Susan Shen's directory...
 `ls /home/linux/ieng6/cs15lwi23/cs15lwi23akv`
 
 **Server**
+
 ![Nice.](9.png)
 
 Uh oh! Can’t do that.
@@ -149,6 +161,7 @@ There’s no error that it doesn’t exist, just that there’s no permission to
 Something that has to do with privileges?
 
 **Client**
+
 ![Nice.](10.png)
 
 Nope. Doesn’t exist on this computer.
@@ -157,11 +170,13 @@ Let's try copying a file from a public folder onto our home folder.
 `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/`
 
 **Server**
+
 ![Nice.](11.png)
 
 Hmmm… Did someone remove hello.txt? That seems to be the problem.
 
 **Client**
+
 ![Nice.](12.png)
 
 As expected, it doesn’t work on Git Bash.
@@ -170,6 +185,7 @@ Hmm... That's weird. Let's try reading its data.
 `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
 
 **Server**
+
 ![Nice.](13.png)
 
 ...It looks like it disappeared?
@@ -178,6 +194,7 @@ You can’t really do anything to this public directory either.
 I guess people forgot to add it?
 
 **Client**
+
 ![Nice.](14.png)
 
 Hello.txt isn’t just gone. It probably never existed on this computer.
@@ -185,17 +202,21 @@ Hello.txt isn’t just gone. It probably never existed on this computer.
 Well, let's try a few more commands.
 
 **Server**
+
 ![Nice.](15.png)
+
 ![Nice.](16.png)
 
 Oh! Looks like they've added `hello.txt` back.
 
 **Client**
+
 ![Nice.](17.png)
 
 Here, I'm copying `hello.txt` to my computer, editing it, and uploading it back.
 
 **Server**
+
 ![Nice.](18.png)
 
 Looks like it works!
