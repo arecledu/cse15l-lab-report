@@ -12,6 +12,10 @@ Here's a screenshot of the VS Code website. Just click that big blue button.
 
 ![Incredible. VS Code's website.](1.png)
 
+This is what the welcome page looks like for Visual Studio Code, which appears after choosing some settings after installation.
+
+![Incredible. VS Code's welcome page.](VSC.png)
+
 ### Step 2. Connect Remotely
 
 Now, we'll want to connect to `ieng6` with SSH.
@@ -32,7 +36,7 @@ Now, pay special attention!
 
 Don't change MyTritonLink password. Don't click Check Password. Instead, press Enter inside the Confirm Password text field.
 
-![Follow these instructions! Don't change MyTritonLink password. Don't click Check Password. Instead, press Enter inside the Confirm Password text field.](Pass.png).
+![Follow these instructions! Don't change MyTritonLink password. Don't click Check Password. Instead, press Enter inside the Confirm Password text field.](Pass.png)
 
 Once you have that done, please wait at least an hour before continuing for your account password to update.
 
@@ -57,7 +61,7 @@ You don't even have to make a new file. Just go to the Menu Bar (this is what Mi
 
 Then, click on `New Terminal`.
 
-![New Terminal.](Terminal.png)
+![Nice.](Terminal.png)
 
 Bam! There's a fresh terminal at the bottom of your screen. It's running PowerShell. You can see it on the top-right of that pane.
 
@@ -94,67 +98,63 @@ Let's see what these guys can do.
 We'll be testing certain commands on both terminals.
 I'll be reposting my findings from a shared Google doc here.
 
-```
-cd ~
-pwd
-```
+Let's first try to **c**hange the **d**irectory (`cd`) to the home (`~`) path and **p**rint the **w**orking **d**irectory (`pwd`) after that, which should return our home path.
+
+`cd ~`
+`pwd`
 
 **Client**
-
-![Nice.](first.png)
+![Nice.](1.png)
 
 Looks like home is `/c/Users/areclusado`.
 
 **Server**
-
 ![Nice.](2.png)
-
 Looks like home is `/home/linux/ieng6/cs15lwi23/cs15lwi23akt` instead.
 
-`-cd`
+Let's try changing directory without giving any arguments.
+
+`cd`
 
 **Client**
-
 ![Nice.](3.png)
 
 **Server**
-
 ![Nice.](4.png)
 
 `cd` without any arguments didn’t seem to do anything.
 
+Now, let's try listing things within our working directory, with the `-lat` option.
+
 `ls -lat`
 
 **Client**
-
 ![Nice.](5.png)
 
 Wow! That looks like all the files in the user root directory.
 
 **Server**
-
 ![Nice.](6.png)
 
 Looks like these files only use extensions. Interesting!
 Both of these appear to be in reverse alphabetical order.
 
+Let's try the `-a` option.
+
 `ls -a`
 
 **Client**
-
 ![Nice.](7.png)
 
 **Server**
-
 ![Nice.](8.png)
 
-Does the same thing as ls -lat, but with less information and also horizontally.
+Does practically the same thing as `ls -lat`, but with less information and also horizontally.
 
 Let’s try to list off Susan Shen's directory...
 `ls /home/linux/ieng6/cs15lwi23/cs15lwi23akv`
 
 **Server**
-
 ![Nice.](9.png)
 
 Uh oh! Can’t do that.
@@ -162,7 +162,6 @@ There’s no error that it doesn’t exist, just that there’s no permission to
 Something that has to do with privileges?
 
 **Client**
-
 ![Nice.](10.png)
 
 Nope. Doesn’t exist on this computer.
@@ -171,13 +170,11 @@ Let's try copying a file from a public folder onto our home folder.
 `cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/`
 
 **Server**
-
 ![Nice.](11.png)
 
 Hmmm… Did someone remove hello.txt? That seems to be the problem.
 
 **Client**
-
 ![Nice.](12.png)
 
 As expected, it doesn’t work on Git Bash.
@@ -186,7 +183,6 @@ Hmm... That's weird. Let's try reading its data.
 `cat /home/linux/ieng6/cs15lwi23/public/hello.txt`
 
 **Server**
-
 ![Nice.](13.png)
 
 ...It looks like it disappeared?
@@ -195,29 +191,33 @@ You can’t really do anything to this public directory either.
 I guess people forgot to add it?
 
 **Client**
-
 ![Nice.](14.png)
 
 Hello.txt isn’t just gone. It probably never existed on this computer.
 
 Well, let's try a few more commands.
 
+From this point onward, I'm using my own computer after lab.
+
+Let's try navigating to the `/home/linux/ieng/cs15lwi23/public` path now...
+
 **Server**
-
 ![Nice.](15.png)
-
-![Nice.](16.png)
 
 Oh! Looks like they've added `hello.txt` back.
 
-**Client**
+Let's put it in our home directory.
 
+![Nice.](16.png)
+
+Now, I'm gonna try copying `hello.txt` to my computer, editing it, and uploading it back.
+
+**Client**
 ![Nice.](17.png)
 
-Here, I'm copying `hello.txt` to my computer, editing it, and uploading it back.
+We upload it back with the same secure copy (`scp`, does *not* refer to the foundation) command.
 
 **Server**
-
 ![Nice.](18.png)
 
-Looks like it works!
+Looks like it works! I forgot to add the newline at the end, though.
