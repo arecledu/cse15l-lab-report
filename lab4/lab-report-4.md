@@ -39,11 +39,11 @@ Uh oh. They've changed the file name from `TestListExamples` to `ListExamplesTes
 
 Last week:
 
-![1](com1.png)
+![1](ecom1.png)
 
 As of writing:
 
-![1](com2.png)
+![1](ecom2.png)
 
 Let's pretend that it's always been `ListExamplesTests.java`. 
 
