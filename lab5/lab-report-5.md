@@ -10,6 +10,11 @@ Again, we'll be looking at the manual [online](https://linuxcommand.org/lc3_man_
 
 https://linuxcommand.org/lc3_man_pages/sed1.html
 
+
+*NOTE: Since some code blocks have lines that are extremely long, this page's `CSS` code has been modified so that code blocks will always wrap at the edge of the page, making all their content visible when exporting to PDF. More specifically, the `white-space` property has been set to `pre-wrap`.*
+
+*Command-line output that is wrapped will still be wrapped as it originally appeared.*
+
 ## `-i[SUFFIX], --in-place[=SUFFIX]`
 ```
 edit files in place (makes backup if SUFFIX supplied)
@@ -20,7 +25,6 @@ Sounds like we won't have to output sed to the same file name with `>`.
 Let's try it out on a random file in `./written_2`. We'll be using `sed`'s `s/regexp/replacement` command a lot.
 
 Let's replace each vowel in `written_2/non-fiction/OUP/Abernathy/ch1.txt` with `e`. We can do that with the script `s/[aeiou]/e/g`.
-
 
 ```
 ambro@LAPTOP-UUG30S5P MINGW64 ~/Documents/Homework/CSE15L/lab-report-repo/cse15l-lab-report/lab5/test/docsearch (main)
